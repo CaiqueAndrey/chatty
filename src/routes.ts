@@ -15,6 +15,9 @@ const messagesController = new MessagesController();
  * Body Params => json do corpo da req {}
  */
 routes.post("/settings", settingsController.create);
+routes.get("/settings/:username", settingsController.findByUsername);
+routes.put("/settings/:username", settingsController.update);
+
 
 routes.post("/users", usersController.create);
 
